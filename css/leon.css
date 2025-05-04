@@ -1,6 +1,7 @@
 /* Global Rules */
 :root {
   --primary-color: #10cab7;
+--section-color: #f6f6f6;
 }
 * {
   box-sizing: border-box;
@@ -160,8 +161,8 @@ body {
 
 /* Features */
 .features {
-  background-color: #f6f6f6;
-  padding: 50px 0;
+    background-color: var(--section-color);
+    padding: 50px 0;
 }
 .features .container {
   display: grid;
@@ -216,17 +217,165 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
+  margin-top: 20px;
 }
 .services .container .services-content .service {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+}
+.services .container .services-content .service .text {
+  flex: 1;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.services .container .services-content .service i {
+  color: var(--primary-color);
+  flex-basis: 30px;
 }
 
 .services .container .services-content .service h3 {
   font-weight: 800;
+  margin: 0;
+  font-size: 20px;
 }
 .services .container .services-content .service p {
   font-size: 15px;
   line-height: 1.8;
   color: #777;
-  font-weight: 100;
+  font-weight: 300;
+  width: 200px;
+  max-width: 100%;
+  margin-left: 10px;
+}
+
+@media (max-width: 520px) {
+  .services .container .services-content .service {
+    flex-direction: column;
+  }
+}
+/* End Services */
+/* Start Portofolio */
+.portofolio {
+  padding: 20px 0;
+  background-color: var(--section-color);
+}
+.portofolio-title {
+  color: #ebeced;
+  font-size: 100px;
+  text-align: center;
+  letter-spacing: -3px;
+  font-weight: 800;
+  margin: 0;
+}
+.portofolio-title + p {
+  color: #777;
+  font-size: 20px;
+  text-align: center;
+  margin-top: -40px;
+}
+@media (max-width: 767px) {
+  .portofolio-title {
+    font-size: 60px;
+  }
+  .portofolio-title + p {
+    margin-top: -30px;
+  }
+}
+.portofolio .container .portofolio-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+.portofolio .container .portofolio-content .portofolio-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: white;
+}
+.portofolio .container .portofolio-content .portofolio-item img {
+  max-width: 100%;
+}
+.portofolio .container .portofolio-content .portofolio-item .info  {
+    padding: 10px;
+}
+.portofolio .container .portofolio-content .portofolio-item .info h3 {
+    font-weight: 800;
+    margin: 0;
+    font-size: 20px;
+}
+.portofolio .container .portofolio-content .portofolio-item .info p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #777;
+    font-weight: 300;
+    width: 200px;
+    max-width: 100%;
+    margin-left: 10px;
+    margin-bottom: 0;
+}
+/* End Portofolio */
+/* Start About */
+
+.about {
+    padding: 20px 0;
+    background-color: var(--section-color);
+}
+.about-title {
+    color: #ebeced;
+    font-size: 100px;
+    text-align: center;
+    letter-spacing: -3px;
+    font-weight: 800;
+    margin: 0;
+  }
+  .portofolio-title + p {
+    color: #777;
+    font-size: 20px;
+    text-align: center;
+    margin-top: -40px;
+  }
+  @media (max-width: 767px) {
+    .portofolio-title {
+      font-size: 60px;
+    }
+    .portofolio-title + p {
+      margin-top: -30px;
+    }
+  }
+  .portofolio .container .portofolio-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+.about .about-image {
+    width: 50%;
+    max-width: 100%;
+}
+.about .about-image img {
+    width: 100%;
+}
+.about .about-text {
+    width: 50%;
+    max-width: 100%;
+}
+.about .about-text h2 {
+    font-weight: 800;
+    margin: 0;
+    font-size: 20px;
+}
+.about .about-text p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #777;
+    font-weight: 300;
+    width: 200px;
+    max-width: 100%;
+    margin-left: 10px;
+    margin-bottom: 0;
 }
