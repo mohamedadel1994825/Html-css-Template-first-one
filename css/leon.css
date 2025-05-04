@@ -50,6 +50,7 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+
 .header .container .logo {
   width: 50px;
 }
@@ -182,19 +183,34 @@ body {
 /* End Features */
 /* Start Services */
 .services {
-  padding: 50px 0;
+  padding: 20px 0;
 }
-.services .container {
+/* .services .container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
-}
-.services .container .services-title {
+} */
+.services-title {
   color: #ebeced;
   font-size: 100px;
   text-align: center;
   letter-spacing: -3px;
   font-weight: 800;
+  margin: 0;
+}
+.services-title + p {
+  color: #777;
+  font-size: 20px;
+  text-align: center;
+  margin-top: -40px;
+}
+@media (max-width: 767px) {
+  .services-title {
+    font-size: 60px;
+  }
+  .services-title + p {
+    margin-top: -30px;
+  }
 }
 .services .container .services-content {
   display: grid;
